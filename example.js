@@ -46,11 +46,12 @@ function init() {
   // like MetaMask, Brave or Opera is added automatically by Web3modal
   const providerOptions = {
     walletconnect: {
+      
       package: WalletConnectProvider,
-      options: {
-        // Mikko's test key - don't copy as your mileage may vary
-        //infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
-        infuraId: "2499b077f4de43f39fe538662cd916d1",
+      options: { rpc: {
+        56: 'https://bsc-dataseed1.defibit.io/'
+      },
+      chainId: 56,
       }
     },
 
